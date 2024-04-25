@@ -6,10 +6,14 @@ import com.example.authservice.dto.RefreshTokenRequest;
 import com.example.authservice.dto.SignInRequest;
 import com.example.authservice.dto.SignUpRequest;
 import com.example.authservice.entity.User;
+import com.example.authservice.exception.UsernameAlreadyExistsException;
 import com.example.authservice.repository.UserRepository;
 import com.example.authservice.service.AuthenticationService;
 import com.example.authservice.service.JwtService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.service.spi.ServiceException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -40,16 +44,24 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         return authenticationResponse;
     }
 
+    @Transactional
     @Override
     public User signUp(SignUpRequest request) {
-        System.out.println(request.getEmail());
-        User user = new User();
-        user.setEmail(request.getEmail());
-        user.setName(request.getName());
-        user.setUsername(request.getUsername());
-        user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setPhoneNumber(request.getPhoneNumber());
-        return userRepository.save(user);
+        try {
+            User user = new User();
+            user.setEmail(request.getEmail());
+            user.setName(request.getName());
+            user.setUsername(request.getUsername());
+            user.setPassword(passwordEncoder.encode(request.getPassword()));
+            user.setPhoneNumber(request.getPhoneNumber());
+            return userRepository.save(user);
+        } catch (DataIntegrityViolationException e) {
+            // Xử lý ngoại lệ khi username đã tồn tại trong cơ sở dữ liệu
+            throw new UsernameAlreadyExistsException("Username is already taken.");
+        } catch (Exception e) {
+            // Xử lý các ngoại lệ khác nếu có
+            throw new ServiceException("An error occurred while signing up.", e);
+        }
     }
 
     public AuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest){

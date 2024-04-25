@@ -89,3 +89,9 @@ Oauth-service/src/main/java/com/example/authservice/config/RedisCacheConfig.java
 Mauth-service/src/main/java/com/example/authservice/config/SecurityConfig.java,a/8/a822dfa8dc9ae1c11c696c9bf59a008d2b1af967
 ã
 [auth-service/src/main/java/com/example/authservice/controller/AuthenticationController.java,4/6/469a263ccb179a2db92d90d0957867ca20ba9345
+Å
+Qauth-service/src/main/java/com/example/authservice/controller/UserController.java,7/4/74239d8079309cc9a0a7988b7c0e12994693560f
+ê
+`auth-service/src/main/java/com/example/authservice/exception/UsernameAlreadyExistsException.java,3/4/3449cb4a5aa099852ff89781626725a9168b4b0f
+s
+Cauth-service/src/main/java/com/example/authservice/dto/Account.java,0/6/06cc3f9d58a9ca8bca980dcb1549f61e5ebd34e8
