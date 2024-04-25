@@ -11,7 +11,7 @@ public class HomeController {
     @Autowired
     private Environment env;
 
-    @RequestMapping("/service01")
+    @RequestMapping("/test")
     public String getMess() {
         return "thông báo từ service01";
     }

@@ -23,11 +23,6 @@ public class HomeController {
 
     @RequestMapping("/test")
     public String getMess() {
-        return restTemplate.getForObject("http://service01/service01", String.class);
-    }
-
-    @RequestMapping("/admin")
-    public String homeAdmin() {
-        return "This is the admin area of Gallery service running at port: " + env.getProperty("local.server.port");
+        return restTemplate.getForObject("http://service01/test", String.class);
     }
 }
