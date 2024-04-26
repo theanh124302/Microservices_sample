@@ -1,8 +1,4 @@
 
-]	java:S125"<This block of commented-out lines of code should be removed.(ÉËœ”üÿÿÿÿ8Ë¯Ä§ñ1
-Z
-java:S1128"=Remove this unused import 'com.example.authservice.dto.Role'.(„™…ê8Ï¯Ä§ñ1
-
-java:S1128"qRemove this unused import 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter'.(÷ìïŠ8Ï¯Ä§ñ1
-‚
-java:S1128"eRemove this unused import 'org.springframework.security.config.http.SessionCreationPolicy.STATELESS'.(Ò©ÍÙ8Ï¯Ä§ñ1
+]	java:S125"<This block of commented-out lines of code should be removed.(ÉËœ”üÿÿÿÿ8–ŒãÍñ1
+X
+java:S1068";Remove this unused "jwtAuthenticationFilter" private field.(„ËÒô8ÌğÍñ1

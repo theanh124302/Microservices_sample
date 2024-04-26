@@ -1,5 +1,6 @@
 package com.example.authservice.service.impl;
 
+
 import com.example.authservice.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -13,13 +14,6 @@ import java.security.Key;
 import java.util.Date;
 import java.util.Map;
 import java.util.function.Function;
-import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-
-import java.util.HashMap;
 
 @Service
 public class JwtServiceImpl implements JwtService {
@@ -81,3 +75,4 @@ public class JwtServiceImpl implements JwtService {
     }
 
 }
+

@@ -1,14 +1,2 @@
 
-ƒ	java:S1257"<This block of commented-out lines of code should be removed.(¾·æşÿÿÿÿÿ8…šÊ¥ñ1J$6a30cdb5-acaf-4430-bb1a-d7b0962f34ee
-]
-java:S1128";Remove this unused import 'lombok.RequiredArgsConstructor'.(ÑØúøÿÿÿÿ8êÃ«¦ñ1
-€
-java:S1128"^Remove this unused import 'org.springframework.security.authentication.AuthenticationManager'.(ğş–şÿÿÿÿ8êÃ«¦ñ1
-
-java:S1128"lRemove this unused import 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken'.(ÖÆ„Ùüÿÿÿÿ8êÃ«¦ñ1
-{
-java:S1128"YRemove this unused import 'org.springframework.security.crypto.password.PasswordEncoder'.(‰¡ßáÿÿÿÿÿ8êÃ«¦ñ1
-a
-java:S1128"Remove this duplicated import.(¼º¡Ú8É±Î¥ñ1J$c7fdebb1-a5f6-4108-aef5-b73447556903
-P
-java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ëÃ«¦ñ1
+ƒ	java:S1251"<This block of commented-out lines of code should be removed.(¾·æşÿÿÿÿÿ8ö¿şÎñ1J$96f75450-76de-4a53-b6fa-998f9ed95bd7
